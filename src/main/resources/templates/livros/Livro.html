@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Livro</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <h1 th:text="${livro.titulo}">Título</h1>
+</header>
+
+<main>
+    <p><strong>Autor:</strong> <span th:text="${livro.autor}">Autor</span></p>
+    <p><strong>ISBN:</strong> <span th:text="${livro.isbn}">ISBN</span></p>
+</main>
+
+<nav>
+    <a th:href="@{/livros}">Voltar</a>
+</nav>
+</body>
+</html>

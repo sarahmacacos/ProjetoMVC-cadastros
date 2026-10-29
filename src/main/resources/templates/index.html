@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biblioteca</title>
+</head>
+<body>
+<h1 th:text="${nomeSistema}">Nome Padrão</h1>
+<p th:text="${mensagemBoasVindas}">Mensagem Padrão</p>
+
+<nav>
+    <a href="#">Gerenciar Livros</a> |
+    <a th:href="@{/sobre}">Sobre</a>
+</nav>
+
+<footer>
+    <p th:text="${statusOperacional}">Status</p>
+    <p>&copy; <span th:text="${anoAtual}">2026</span></p>
+</footer>
+</body>
+</html>
