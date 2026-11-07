@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Livros</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+<header>
+    <h1>Livros cadastrados</h1>
+</header>
+
+<main>
+    <p th:if="${livros.isEmpty()}">Nenhum livro cadastrado ainda.</p>
+
+    <table th:unless="${livros.isEmpty()}">
+        <thead>
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>ISBN</th>
+            <th>Ação</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="livro : ${livros}">
+            <td th:text="${livro.titulo}"></td>
+            <td th:text="${livro.autor}"></td>
+            <td th:text="${livro.isbn}"></td>
+            <td>
+                <form th:action="@{/livros/excluir/{id}(id=${livro.id})}" method="post">
+                    <button type="submit">Excluir</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Total de livros: <span th:text="${livros.size()}">0</span></strong></p>
+</main>
+
+<nav>
+    <a th:href="@{/livros/novo}">Cadastrar novo livro</a>
+    <a th:href="@{/}">Voltar ao menu</a>
+</nav>
+</body>
+</html>

@@ -15,8 +15,8 @@ public class HomeController {
     public String index(Model model) {
 
         // o model leva os dados do java pra página html
-        model.addAttribute("nomeSistema", "Biblioteca Central");
-        model.addAttribute("mensagemBoasVindas", "Gestão de acervo e empréstimos!");
+        model.addAttribute("nomeSistema", "Biblioteca");
+        model.addAttribute("mensagemBoasVindas", "Empréstimos!");
         model.addAttribute("anoAtual", Year.now().getValue()); // pega o ano de hoje
         model.addAttribute("statusOperacional", "Sistema operando normalmente");
 
@@ -27,7 +27,7 @@ public class HomeController {
     // quando alguém abre o sobre
     @GetMapping("/sobre")
     public String sobre(Model model) {
-        model.addAttribute("nomeSistema", "Biblioteca Central");
+        model.addAttribute("nomeSistema", "Biblioteca");
         return "sobre";
     }
 }
