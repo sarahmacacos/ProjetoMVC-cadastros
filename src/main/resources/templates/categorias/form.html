@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastrar Categoria</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+<header>
+    <h1>Cadastrar Categoria</h1>
+</header>
+
+<main>
+    <p class="erro" th:if="${param.erro != null and param.erro[0] == 'vazio'}">Digite o nome da categoria.</p>
+    <p class="erro" th:if="${param.erro != null and param.erro[0] == 'longo'}">O nome pode ter no máximo 100 letras.</p>
+    <p class="erro" th:if="${param.erro != null and param.erro[0] == 'duplicada'}">Essa categoria já existe.</p>
+
+    <form th:object="${categoria}" th:action="@{/categorias}" method="post">
+
+        <label for="nome">Nome:</label>
+        <input type="text" th:field="*{nome}" maxlength="100" />
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+</main>
+
+<nav>
+    <a th:href="@{/categorias}">Voltar</a>
+</nav>
+</body>
+</html>

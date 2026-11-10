@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 4px;
+}
+
+header p {
+    margin-top: 0;
+    color: #666;
+}
+
+main {
+    border: 1px solid #ccc;
+    padding: 8px 16px 16px;
+}
+
+a {
+    color: #0645ad;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    margin-right: 16px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+    padding: 6px;
+    border: 1px solid #999;
+}
+
+button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    background: #0645ad;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #04327a;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
+
+td form {
+    margin: 0;
+}
+
+td button {
+    margin-top: 0;
+    padding: 4px 10px;
+}
+
+.erro {
+    color: #b00020;
+    font-weight: bold;
+}

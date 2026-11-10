@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Biblioteca</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
 </head>
 <body>
-<h1 th:text="${nomeSistema}">Nome Padrão</h1>
-<p th:text="${mensagemBoasVindas}">Mensagem Padrão</p>
+<header>
+    <h1 th:text="${nomeSistema}">Nome Padrão</h1>
+    <p th:text="${mensagemBoasVindas}">Mensagem Padrão</p>
+</header>
 
 <nav>
-    <a href="#">Gerenciar Livros</a> |
+    <a th:href="@{/livros}">Gerenciar Livros</a>
+    <a th:href="@{/autores}">Gerenciar Autores</a>
+    <a th:href="@{/categorias}">Gerenciar Categorias</a>
     <a th:href="@{/sobre}">Sobre</a>
 </nav>
 
 <footer>
-    <p th:text="${statusOperacional}">Status</p>
+    <p th:text="${statusOperacional}">Status Padrão</p>
 </footer>
 </body>
 </html>

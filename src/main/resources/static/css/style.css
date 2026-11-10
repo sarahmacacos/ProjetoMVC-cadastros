@@ -94,3 +94,8 @@ td button {
     margin-top: 0;
     padding: 4px 10px;
 }
+
+.erro {
+    color: #b00020;
+    font-weight: bold;
+}
